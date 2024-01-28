@@ -1,4 +1,6 @@
 import numpy as np
+
+
 class PatchSpecs:
 
     def __init__(self, freq, relative_permittivity, dielectric_height, speed_of_light):
@@ -13,8 +15,6 @@ class PatchSpecs:
 
     def width_cal(self):
         numerator = self.speed_of_light
-        denominator = (2*self.freq*1000000000)*np.sqrt((self.relative_permittivity+1)/2)
-        width = np.divide(numerator,denominator)
+        denominator = (2 * self.freq * 1000000000) * np.sqrt((self.relative_permittivity + 1) / 2)
+        width = np.divide(numerator, denominator)
         print(width)
-
-
